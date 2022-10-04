@@ -1,5 +1,10 @@
 .App {
-  text-align: center;
+  overflow-x: hidden;
+}
+
+.body{
+  padding: 2rem;
+  margin: 2rem;
 }
 
 .App-logo {
@@ -35,4 +40,65 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.announcement-bar{
+  padding: 0.5rem 1.25rem;
+  margin: 0;
+  letter-spacing: .1rem;
+  font-size: 0.75rem;
+  border-bottom: 1px solid #c4c4c4;
+  background-color: #f3f3f3;
+  font-family: 'Assistant, sans-serif';
+  font-size: 0.9rem;
+  letter-spacing: .1rem;
+}
+
+.header{
+  border-bottom: 1px solid #c4c4c4;
+  background-color: #f3f3f3;
+  font-family: 'Assistant, sans-serif';
+}
+
+.header-row{
+    /* center the element */
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    /* give it dimensions */
+    height: 117px;
+    max-width: 1100px;
+    min-width: 990px;
+    padding-top: 1.5rem;
+    padding-left: 0px !important;
+}
+
+.link{
+  color: #303030;
+  text-decoration: none;
+  padding-left: 2rem;
+}
+
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.icons{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 10rem;
+}
+
+.icon-wrapper{
+  margin: 0.35rem;
+  padding-left: 1rem;
+  margin-top: 2rem;
+}
+
+.goback{
+  color: blue;
+  font-size: small;
+  text-decoration: solid;
 }

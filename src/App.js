@@ -1,24 +1,50 @@
 import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
 import './App.css';
+import Header from './Header';
+import PhoneHeader from './PhoneHeader';
+import Body from './Body';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+require('dotenv').config()
 
 function App() {
+  const [smallScreen, setSmallScreen] = useState(false)
+  useEffect(() => {
+    if (window.innerWidth < 990)
+    setSmallScreen(true)
+    else
+    setSmallScreen(false)
+  },[])
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 990)
+      setSmallScreen(true)
+      else
+      setSmallScreen(false)    
+}
+
+    window.addEventListener('resize', handleResize)
+  })
+
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     {
+      !smallScreen && (
+        <Header/>
+      )
+     } 
+     {
+      smallScreen && (
+        <PhoneHeader/>
+      )
+     } 
     </div>
+     <Body/>
+    </>
+    
   );
 }
 
